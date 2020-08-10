@@ -1,6 +1,8 @@
-# week_2_meetup
+# Week 2: Meetup Page
 
-A new Flutter project.
+My submission for Flutter UI Challenge Week 2.
+
+<img src="https://github.com/thisis-dc4/week_2_meetup/blob/master/Submission.png" width=50%>
 
 ## Getting Started
 
