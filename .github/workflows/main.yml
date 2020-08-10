@@ -23,7 +23,7 @@ jobs:
           git config --global user.email chaudharydishant.09@gmail.com
           git config --global user.name thisis-dc4
           git status
-          git remote add origin https://${{secrets.ACCESS_TOKEN}}@github.com/thisis-dc4/try_web.git
+          git remote add origin https://${{secrets.ACCESS_TOKEN}}@github.com/thisis-dc4/week_2_meetup.git
           git checkout -b gh-pages
           git add --all
           git commit -m "update"
