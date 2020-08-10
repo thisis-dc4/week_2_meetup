@@ -5,9 +5,10 @@ class FirstItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 100,
       padding: const EdgeInsets.all(15.0),
       decoration: const BoxDecoration(
-        borderRadius: BorderRadius.only(bottomLeft: Radius.circular(50.0)),
+        borderRadius: BorderRadius.only(bottomLeft: Radius.circular(70.0)),
         color: Colors.white,
       ),
       child: Row(
