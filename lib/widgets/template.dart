@@ -5,12 +5,14 @@ class Template extends StatelessWidget {
     Key key,
     this.color,
     this.subtitle,
+    this.subtitleColor = Colors.pink,
     this.text,
     this.widget,
   }) : super(key: key);
   final Color color;
   final String text, subtitle;
   final widget;
+  final Color subtitleColor;
 
   @override
   Widget build(BuildContext context) {
@@ -25,10 +27,17 @@ class Template extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Text(text),
+          Text(
+            text,
+            style: TextStyle(fontSize: 16.0),
+          ),
           Text(
             subtitle,
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: subtitleColor,
+              fontSize: 18.0,
+            ),
           ),
           widget,
         ],

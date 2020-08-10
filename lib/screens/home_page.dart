@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:week_2_meetup/widgets/images_stack.dart';
 
 import 'package:week_2_meetup/widgets/template.dart';
 import 'package:week_2_meetup/widgets/first_item.dart';
@@ -7,17 +8,26 @@ import 'package:week_2_meetup/widgets/first_item.dart';
 class HomePage extends StatelessWidget {
   final widget1 = Row(
     mainAxisAlignment: MainAxisAlignment.center,
-    children: [const Text('Marie and 4 others')],
+    children: [
+      ImagesStack(),
+      const Text('Marie and 4 others'),
+    ],
   );
   final widget2 = Row(
     mainAxisAlignment: MainAxisAlignment.center,
     children: [
       IconButton(
-        icon: const Icon(FontAwesomeIcons.checkCircle),
+        icon: const Icon(
+          FontAwesomeIcons.checkCircle,
+          size: 30,
+        ),
         onPressed: () {},
       ),
       IconButton(
-        icon: const Icon(FontAwesomeIcons.timesCircle),
+        icon: const Icon(
+          FontAwesomeIcons.timesCircle,
+          size: 30,
+        ),
         onPressed: () {},
       ),
     ],
@@ -27,7 +37,12 @@ class HomePage extends StatelessWidget {
       borderRadius: BorderRadius.circular(15.0),
     ),
     color: Colors.pink[100],
-    child: const Text('You are going!'),
+    child: const Text(
+      'You are going!',
+      style: TextStyle(
+        color: Colors.white,
+      ),
+    ),
     onPressed: () {},
   );
 
@@ -72,8 +87,8 @@ class HomePage extends StatelessWidget {
               Template(
                 text: 'Today 6:00pm',
                 subtitle: 'Yoga and Medidation for Beginners',
-                color: Colors.pink[50],
                 widget: widget1,
+                color: Colors.pink[50],
               ),
             ],
           ),
@@ -86,6 +101,7 @@ class HomePage extends StatelessWidget {
               ),
               Template(
                 text: 'Today 8:00pm',
+                subtitleColor: Colors.white,
                 subtitle: 'Practice French, English and Chinese',
                 color: Colors.pink[100],
                 widget: widget2,
@@ -93,10 +109,11 @@ class HomePage extends StatelessWidget {
             ],
           ),
           Template(
-            color: Colors.pink[200],
             text: 'Today 9:00pm',
+            subtitleColor: Colors.white,
             subtitle: 'Easy and Gentle yoga',
             widget: widget3,
+            color: Colors.pink[200],
           ),
         ],
       ),
